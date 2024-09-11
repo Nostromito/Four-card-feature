@@ -1,0 +1,147 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --bold-text-color: hsl(234, 12%, 34%);
+    --normal-text-color: hsl(229, 6%, 66%);
+
+    --BG-color: hsl(0, 0%, 98%);
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--BG-color);
+}
+
+main, header {
+    font-family: poppins;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-top: 3%;
+}
+
+h1 {
+    color: var(--normal-text-color);
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--bold-text-color);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+header p {
+    max-width: 35%;
+    margin: 0 auto;
+    margin-top: 1.5%;
+    color: var(--normal-text-color);
+    font-size: .85rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 3em;
+}
+
+.box {
+    border-radius: 3px;
+    max-width: 22rem;
+    min-height: 14rem;
+    padding: 30px;
+    border-top: solid;
+    background-color: white;
+    box-shadow: 0 4px 8px -8px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.box-text {
+    text-align: right;
+}
+
+.box-text p, h3 {
+    text-align: left;
+}
+
+.box-text p {
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+    color: var(--normal-text-color);
+    font-size: .80rem;
+}
+
+.box-text h3 {
+    color: var(--bold-text-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-1 {
+    border-top: solid;
+    border-color: var(--Cyan);
+}
+
+.box-2 {
+    border-top: solid;
+    border-color: var(--Red);
+}
+
+.box-3 {
+    border-top: solid;
+    border-color: var(--Orange);
+}
+
+.box-4 {
+    border-top: solid;
+    border-color: var(--Blue);
+}
+
+@media (max-width: 866px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .container {
+        gap: 1.5em;
+    }
+
+    .col {
+        gap: 1.5em;
+    }
+
+    h1, h2 {
+        font-size: 1.25rem;
+    }
+
+    header p {
+        font-size: .9rem;
+        max-width: 100%;
+    }
+}
